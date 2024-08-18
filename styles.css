@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #cfe8f8;
+    padding: 20px;
+}
+
+/* ToDo App */
+.todo-app {
+    flex: 1;
+    padding-right: 20px;
+    justify-content:center;
+    padding:40px;
+}
+
+/* Task Form */
+.task-form {
+    background-color: #3a0f2e9c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.task-form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-form h2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.task-list h2 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.task-form .row input,
+.task-form .description textarea,
+.task-form .date input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.task-form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+    color: #888;
+}
+
+.task-form .addtask button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form .addtask button:hover {
+    background-color: #007bff;
+}
+
+/* Task List */
+.task-list {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+.task-list h2 {
+    color: #3a5244;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Table Styling */
+#task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#task-table th,
+#task-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+#task-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#task-table td {
+    border-bottom: 1px solid #ddd;
+}
+
+#task-table tr:nth-child(even) {
+    background-color: rgb(128, 208, 255);
+}
+
+#task-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#task-table td:last-child {
+    text-align: center;
+}
+
+#task-table .checkbox-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#task-table .delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Strikethrough Effect */
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .todo-app,
+    .task-list {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}

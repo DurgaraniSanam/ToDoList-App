@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Grey+Qo&family=Noto+Sans+JP:wght@100..900&display=swap');
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="task-form">
+                <h2>Add Task <img src="images/Add.png" alt="Add Icon"></h2>
+                <div class="row">
+                    <input type="text" id="input-title" placeholder="Enter Your Task Title" aria-label="Task Title">
+                </div>
+                <div class="description">
+                    <textarea id="input-desc" placeholder="Enter Your Task Description" aria-label="Task Description"></textarea>
+                </div>
+                <div class="date">
+                    <input type="date" id="input-date" aria-label="Task Date">
+                </div>
+                <div class="addtask">
+                    <button onclick="addTask()">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="task-list">
+            <h2>ToDo List <img src="images/notes.png" alt="Notes Icon"></h2>
+            <table id="task-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="list-container">
+                    <!-- Tasks will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
